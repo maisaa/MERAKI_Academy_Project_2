@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "myFont";
+    src: url("myFont.woff2");
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +13,8 @@
 
 html, body {
     background-color: beige;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "myFont", "Bitstream Vera Serif", serif;
 }
 h1{
     text-align: center;
@@ -31,6 +37,7 @@ nav {
 ul li a {
     color: black;
     padding: 20px;
+    
 }
 
 nav ul  {
@@ -43,5 +50,20 @@ nav ul  {
 
 a:hover {
     background-color: chocolate;
-    text-shadow: dimgrey;
+    font-size: x-large;
+    border-radius: 5px;
+    color: black;
+}
+
+.coffee {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.cof {
+    color: chocolate;;
+}
+
+.padi {
+    padding: 10% 0;
 }
