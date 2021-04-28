@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* colors : rgb(211, 167, 89)     rgb(202, 155, 65)   rgb(51, 48, 48) */
+
+html, body {
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: rgb(211, 167, 89) ;
+    color: black;
+}
+
+ul {
+    
+}
+
