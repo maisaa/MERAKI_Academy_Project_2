@@ -21,9 +21,27 @@ a {
 nav {
     background-color: rgb(211, 167, 89) ;
     color: black;
+
+    display:  flex;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 1em;
 }
 
-ul {
-    
+ul li a {
+    color: black;
+    padding: 20px;
 }
 
+nav ul  {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+
+}
+
+a:hover {
+    background-color: chocolate;
+    text-shadow: dimgrey;
+}
