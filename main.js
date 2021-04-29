@@ -1,20 +1,20 @@
 const body = $('body')
-const nuts = $("#category-2")
+const nuts = $("#category-1-1")
 
 $(document).ready(function(){
-    $("#category-1").click(function(){
+    $("#category-1-1").click(function(){
         $(this).hide();
     });
 });
 
-let pp1 = true;
+let flag = true;
 
 $("#category-1").on("click", function () {
-  if (pp1) {
+  if (flag) {
     nuts.fadeIn("slow");
-    pp1 = false;
+    flag = false;
   } else {
     nuts.fadeOut("slow");
-    pp1 = true;
+    flag = true;
   }
 });
