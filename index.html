@@ -10,14 +10,14 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
         <a class="navbar-brand" href="#">
             <img src="./images/logo1.jpeg" width="110" height="50" border-radius="50%" alt="logo">
         </a>
         <button class="navbar-toggler collapsed"  data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="#collapsibleNavbar">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <div class="navbar-nav ">
                 <a class=" nav-link  active" href="#home">Home</a>        
                 <a class=" nav-link " href="#products">Products</a>
@@ -27,42 +27,43 @@
         </div>
     </nav>
 
-
+<section id="category">
     <div class="card bg-dark text-white">
         <img class="card-img" style="opacity:0.5;" src="./images/12.jpeg" alt="card image">
         <div class="card-img-overlay" >
             <div class="card bg-dark text-white" >
                 <!--  -->
                 <div class="card-img-overlay">
-                    <h5 class="card-text display-4 text-center py-2 my-2"> The Best Chocolate For Your Coffee </h5>
-                    <div class="card-deck" >
-                        <div class="card" style="width: 200px; height: 200px;">
-                          <img class="card-img" style="min-width: 100%; min-height: 100%; width: auto; height: auto;" src="./images/5.jpeg" alt="Card image">
+                    <h5 class="card-text display-4 text-center py-4 my-4"> The Best Chocolate For Your Coffee </h5>
+                    <div class="card-deck  py-4 my-4" >
+                        <div id="category-1" class="card" style="width: 200px; height: 200px;">
+                            <img class="card-img" style="min-width: 100%; min-height: 100%; width: auto; height: auto;" src="./images/5.jpeg" alt="Card image">
                         </div>
-                        <div class="card" style="width: 200px; height: 200px;">
+                        <div id="category-2" class="card" style="width: 200px; height: 200px;">
                             <img class="card-img" style="min-width: 100%; min-height: 100%; width: auto; height: auto;" src="./images/13.jpeg" alt="Card image">
-                          </div>
-                        <div class="card" style="width: 200px; height: 200px;">
-                          <img class="card-img" style="min-width: 100%; min-height: 100%; width: auto; height: auto;" src="./images/4.jpeg" alt="Card image">
                         </div>
-                        <div class="card" style="width: 200px; height: 200px;">
-                          <img class="card-img" style="min-width: 100%; min-height: 100%; width: auto; height: auto;" src="./images/m.jpeg" alt="Card image">
+                        <div id="category-3" class="card" style="width: 200px; height: 200px;">
+                            <img class="card-img" style="min-width: 100%; min-height: 100%; width: auto; height: auto;" src="./images/4.jpeg" alt="Card image">
                         </div>
-                      </div>
+                        <div id="category-4" class="card" style="width: 200px; height: 200px;">
+                            <img class="card-img" style="min-width: 100%; min-height: 100%; width: auto; height: auto;" src="./images/m.jpeg" alt="Card image">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div>
+</section>
 
-    </div>
-    
-
-    
-
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-buttom" style="color: #e3f2fd;">
+        <div class=" text-center">
+            <p class="text-center">Aladdin Coffee . Nuts . Chocolate 2021</p>
+        </div>
+    </nav>
+        
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="./main.js"></script>
 </body>
 </html>
