@@ -3,10 +3,11 @@ let products = $('#products')
 
 // let items = ["./images/13.jpeg","./images/14.jpeg","./images/15.jpeg"]
 let items = [{src:"./images/13.jpeg", title:"title",discretion:"discretion"},
-             {src:"./images/14.jpeg", title:"title",discretion:"discretion"},
+             {src:"./images/t1.jpeg", title:"title",discretion:"discretion"},
              {src:"./images/15.jpeg", title:"title",discretion:"discretion"},
              {src:"./images/14.jpeg", title:"title",discretion:"discretion"},
-             {src:"./images/15.jpeg", title:"title",discretion:"discretion"}]
+             {src:"./images/t2.jpeg", title:"title",discretion:"discretion"},
+             {src:"./images/11.jpeg", title:"title",discretion:"discretion"}]
 
 let renderItems =()=>{
     items.forEach( (ele,i) => {
