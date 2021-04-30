@@ -20,7 +20,7 @@ let renderMainCategory = () =>{
         console.log("render list of Categories");
         const card = $ (`<div id=${i} class="card">
                             <div class="image">
-                                <img src="${ele.src}">
+                                <img src="${ele.src}" alt="${ele.title}">
                             </div>
                             <div class="title">
                                 <h4>${ele.title}</h4>
@@ -30,22 +30,19 @@ let renderMainCategory = () =>{
     });
 
 }
-
 renderMainCategory()
 
 let renderItems =()=>{
     items.forEach( (ele,i) => {
         console.log("render list of items");
-        const card =$( `<div id=${i} class="card" style="max-width: 20% ; max-height: 40%;">
-                        <img class="card-img-top" src="${ele.src}" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">${ele.title}</h5>
-                            <p class="card-text">${ele.discretion}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>`)
+        const card =$( `<div id=${i} class="item-card">
+                            <div class="image">
+                                <img src="${ele.src}">
+                            </div>
+                            <div class="title">
+                                <h1>${ele.title}</h1>
+                            </div>    
+                        </div>`)
             console.log("card ", card);
         card.appendTo(products)            
     });
