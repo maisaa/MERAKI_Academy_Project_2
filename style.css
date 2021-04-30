@@ -16,29 +16,19 @@ li a{
 
 .container {
     
-    max-height: 2%;
-    padding: 2%;
+    max-height: 90px;
+    padding: 5px;
     align-items: center;
     background-color:   rgba(13, 17, 23,0.85);
     display: flex;
-    justify-content: space-between;
-
-    
+    justify-content: space-between;  
 }
-.footer {
-    height: 50px;
-    padding: 20px;
-    text-align: center;
-}
-
 .nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 2rem;
-
 }
-
 #logo {
     width: 150px;
     height: 80px;
@@ -54,13 +44,20 @@ li a{
 	cursor: pointer;
 }
 
+.footer {
+    position: fixed;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+}
 
 section {
-    background: rgb(31, 25, 25);
+    background: rgba(31, 25, 25,0.5);
     box-sizing: border-box;
     padding: 50px ;
     display: flex;
     justify-content: space-between;
+    
     
 }
 .div {
@@ -71,14 +68,21 @@ section {
     
 }
 
-img {
-    max-width: 20%;
-    max-height: 20%;
-    width: auto; 
-    height: auto;
+
+.card {
+    width: 20%;
+    display: inline-block;
+    border-radius: 15px; 
+    margin: 2%;
 }
 
-#category img {
+.image img{
+    width: 100%;
+    border-radius: 15px; 
+}
 
-    border-radius: 3%;
+.title{
+    
+    text-align: center;
+    padding: 10px;
 }
