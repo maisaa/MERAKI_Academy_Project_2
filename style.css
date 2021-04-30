@@ -17,11 +17,12 @@ li a{
 .container {
     
     max-height: 90px;
-    padding: 5px;
+    margin: 10px;
     align-items: center;
     background-color:   rgba(13, 17, 23,0.85);
     display: flex;
     justify-content: space-between;  
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38);
 }
 .nav {
     display: flex;
@@ -45,7 +46,6 @@ li a{
 }
 
 .footer {
-    position: fixed;
     height: 50px;
     padding: 20px;
     text-align: center;
@@ -95,7 +95,7 @@ section {
 }
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     padding: 3px;
     font-size: 30px;
     text-align: center;
@@ -115,5 +115,9 @@ section {
     grid-area: auto;
     border-radius: 15px;
     margin: 2%;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0);
+}
+#part2 {
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38);
 }
   

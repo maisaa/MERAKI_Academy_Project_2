@@ -7,12 +7,12 @@ let mainCategory = [{src:"./images/c0.jpg", title:"Coffee",discretion:"Coffee"},
                     {src:"./images/cc.jpg", title:"Chocolate",discretion:"Chocolate"}]
 
 // let items = ["./images/13.jpeg","./images/14.jpeg","./images/15.jpeg"]
-let items =    [{src:"./images/13.jpeg", title:"title",discretion:"discretion"},
-                {src:"./images/t1.jpeg", title:"title",discretion:"discretion"},
-                {src:"./images/15.jpeg", title:"title",discretion:"discretion"},
-                {src:"./images/14.jpeg", title:"title",discretion:"discretion"},
-                {src:"./images/t2.jpeg", title:"title",discretion:"discretion"},
-                {src:"./images/11.jpeg", title:"title",discretion:"discretion"}]
+let items =    [{src:"./images/13.jpeg", title:"Pistachio",discretion:"discretion"},
+                {src:"./images/t1.jpeg", title:"Rocher",discretion:"Rocher & pistachio"},
+                {src:"./images/15.jpeg", title:"Man & Salwa",discretion:"Man & Salwa"},
+                {src:"./images/14.jpeg", title:"Rose",discretion:"discretion"},
+                {src:"./images/t2.jpeg", title:"Wafer",discretion:"Wafer & pistachio"},
+                {src:"./images/11.jpeg", title:"Baby set",discretion:"Baby set"}]
 
 
 let renderMainCategory = () =>{
