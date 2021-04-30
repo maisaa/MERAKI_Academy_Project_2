@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    color: rgb(186, 133, 42)
+}
+
+
+
+#bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding: 2%;
+    align-items: center;
+    background-color: rgb(52, 52, 52 , 0.50);
+
+}
