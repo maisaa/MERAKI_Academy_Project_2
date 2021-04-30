@@ -1,4 +1,6 @@
-
+.body{
+    background-color: rgb(27, 27, 26);
+}
 
 ul{
     list-style: none;
@@ -120,4 +122,7 @@ section {
 #part2 {
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38);
 }
-  
+
+.deception {
+    text-align: center;
+}
