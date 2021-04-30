@@ -52,7 +52,7 @@ li a{
 }
 
 section {
-    background: rgba(31, 25, 25,0.5);
+    background: rgba(31, 25, 25,0.0);
     box-sizing: border-box;
     padding: 50px ;
     display: flex;
