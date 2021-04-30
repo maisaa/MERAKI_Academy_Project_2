@@ -17,7 +17,10 @@ li a{
 }
 
 .container {
-    
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 97%;
     max-height: 90px;
     margin: 10px;
     align-items: center;
@@ -45,6 +48,11 @@ li a{
 	border-radius: 5px;
 	background-color: rgb(15, 6, 6);
 	cursor: pointer;
+}
+#contant {
+    position: absolute;
+    top: 110px;
+
 }
 
 .footer {
@@ -91,7 +99,7 @@ section {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 15%;
     grid-gap: 2em;
 }
