@@ -2,25 +2,25 @@ const body = $('body')
 let products = $('#products')
 let categories = $('#main-category')
 
-let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", discretion: " delicious roasted and ground coffee, specially designed for our dear customers " },
-{ src: "./images/n2.jpg", title: "Nuts", discretion: "high quality nuts, tasty every time from Aladdin Roastery to all parts of Germany" },
-{ src: "./images/cc.jpg", title: "Chocolate", discretion: " made from the finest cocoa beans and the highest European health and quality standards" }]
+let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " delicious roasted and ground coffee, specially designed for our dear customers " },
+{ src: "./images/n2.jpg", title: "Nuts", description: "high quality nuts, tasty every time from Aladdin Roastery to all parts of Germany" },
+{ src: "./images/cc.jpg", title: "Chocolate", description: " made from the finest cocoa beans and the highest European health and quality standards" }]
 
 // let items = ["./images/13.jpeg","./images/14.jpeg","./images/15.jpeg"]
-let Chocolate = [{ type: "Chocolate", src: "./images/13.jpeg", title: "Pistachio", discretion: "discretion" },
-{ type: "Chocolate", src: "./images/t1.jpeg", title: "Rocher", discretion: "Rocher & pistachio" },
-{ type: "Chocolate", src: "./images/15.jpeg", title: "Man & Salwa", discretion: "Man & Salwa" },
-{ type: "Chocolate", src: "./images/14.jpeg", title: "Rose", discretion: "discretion" },
-{ type: "Chocolate", src: "./images/t2.jpeg", title: "Wafer", discretion: "Wafer & pistachio" },
-{ type: "Chocolate", src: "./images/5.jpeg", title: "Baby set", discretion: "Baby set" },
-{ type: "Chocolate", src: "./images/ms.jpg", title: "Gift", discretion: "Gift" }]
+let Chocolate = [{ type: "Chocolate", src: "./images/13.jpeg", title: "Pistachio", description: "discretion" },
+{ type: "Chocolate", src: "./images/t1.jpeg", title: "Rocher", description: "Rocher & pistachio" },
+{ type: "Chocolate", src: "./images/15.jpeg", title: "Man & Salwa", description: "Man & Salwa" },
+{ type: "Chocolate", src: "./images/14.jpeg", title: "Rose", description: "discretion" },
+{ type: "Chocolate", src: "./images/t2.jpeg", title: "Wafer", description: "Wafer & pistachio" },
+{ type: "Chocolate", src: "./images/5.jpeg", title: "Baby set", description: "Baby set" },
+{ type: "Chocolate", src: "./images/ms.jpg", title: "Gift", description: "Gift" }]
 
-let Nuts = [{ type: "Nuts", src: "./images/p.jpg", title: "Pistachio", discretion: "Ppistachio" },
-{ type: "Nuts", src: "./images/k.jpg", title: "Cashew", discretion: "Cashew" },
-{ type: "Nuts", src: "./images/mix.jpg", title: "Mix nuts", discretion: "Mix nuts" },
-{ type: "Nuts", src: "./images/l.jpg", title: "Almonds", discretion: "Almonds" },]
+let Nuts = [{ type: "Nuts", src: "./images/p.jpg", title: "Pistachio", description: "Ppistachio" },
+{ type: "Nuts", src: "./images/k.jpg", title: "Cashew", description: "Cashew" },
+{ type: "Nuts", src: "./images/mix.jpg", title: "Mix nuts", description: "Mix nuts" },
+{ type: "Nuts", src: "./images/l.jpg", title: "Almonds", description: "Almonds" },]
 
-let Coffee = [{ type: "Coffee", src: "./images/c1.jpg", title: "Arabic coffee", discretion: "discretion" }]
+let Coffee = [{ type: "Coffee", src: "./images/c1.jpg", title: "Arabic coffee", description: "discretion" }]
 
 // render main Category part1
 let renderMainCategory = () => {
@@ -34,7 +34,7 @@ let renderMainCategory = () => {
                                 <h3>${ele.title}</h3>
                             </div>
                             <div class="deception">
-                                <p>${ele.discretion}</p>
+                                <p>${ele.description}</p>
                             </div>
                         </div>`);
         card.appendTo(categories);
@@ -57,7 +57,7 @@ let renderItems = (category, index) => {
                             <div class="title">
                                 <h3>${ele.title}</h3>
                             </div>
-                            <div class="deception">
+                            <div class="description">
                                 <button>Add to cart</button>
                             <div>
                         </div>`)
@@ -91,7 +91,6 @@ let login = () => {
                     </form>`)
     form.appendTo(loginForm)
 }
-
 
 let flag = true;
 
