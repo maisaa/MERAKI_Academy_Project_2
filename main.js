@@ -12,9 +12,13 @@ let Chocolate =    [{src:"./images/13.jpeg", title:"Pistachio",discretion:"discr
                         {src:"./images/15.jpeg", title:"Man & Salwa",discretion:"Man & Salwa"},
                         {src:"./images/14.jpeg", title:"Rose",discretion:"discretion"},
                         {src:"./images/t2.jpeg", title:"Wafer",discretion:"Wafer & pistachio"},
-                        {src:"./images/11.jpeg", title:"Baby set",discretion:"Baby set"}]
+                        {src:"./images/5.jpeg", title:"Baby set",discretion:"Baby set"},
+                        {src:"./images/ms.jpg", title:"Gift",discretion:"Gift"}]
 
-let Nuts = [{src:"./images/n2.jpg", title:"high quality nuts",discretion:"discretion"}]  
+let Nuts = [{src:"./images/p.jpg", title:"Pistachio",discretion:"Ppistachio"},
+            {src:"./images/k.jpg", title:"Cashew",discretion:"Cashew"},
+            {src:"./images/mix.jpg", title:"Mix nuts",discretion:"Mix nuts"},
+            {src:"./images/l.jpg", title:"Almonds",discretion:"Almonds"},]  
 
 let Coffee = [{src:"./images/c1.jpg", title:"Arabic coffee",discretion:"discretion"}] 
 
