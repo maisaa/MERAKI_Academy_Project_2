@@ -4,7 +4,7 @@ let categories = $('#main-category')
 
 let mainCategory = [{src:"./images/c0.jpg", title:"Coffee",discretion:" delicious roasted and ground coffee, specially designed for our dear customers "},
                     {src:"./images/n2.jpg", title:"Nuts",discretion:"high quality nuts, tasty every time from Aladdin Roastery to all parts of Germany"},
-                    {src:"./images/cc.jpg", title:"Chocolate",discretion:"wide collection of chocolate made from the finest cocoa beans and the highest European health and quality standards"}]
+                    {src:"./images/cc.jpg", title:"Chocolate",discretion:" made from the finest cocoa beans and the highest European health and quality standards"}]
 
 // let items = ["./images/13.jpeg","./images/14.jpeg","./images/15.jpeg"]
 let Chocolate =    [{src:"./images/13.jpeg", title:"Pistachio",discretion:"discretion"},
@@ -53,8 +53,11 @@ let renderItems =(category)=>{
                                 <img src="${ele.src}">
                             </div>
                             <div class="title">
-                                <h1>${ele.title}</h1>
-                            </div>    
+                                <h3>${ele.title}</h3>
+                            </div>
+                            <div class="deception">
+                                <button>Add to cart</button>
+                            <div>
                         </div>`)
             console.log("card ", card);
         card.appendTo(products)            
