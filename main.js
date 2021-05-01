@@ -26,7 +26,6 @@ let Coffee = [{type:"Coffee",src:"./images/c1.jpg", title:"Arabic coffee",discre
 let renderMainCategory = () =>{
     mainCategory.forEach((ele,i) => {
         console.log("render list of Categories");
-        // let sub = $('#sub-category').text(ele.title)
         const card = $ (`<div id=${i} class="card">
                             <div class="image">
                                 <img src="${ele.src}" alt="${ele.title}" onClick="renderItems(${ele.title},${i})" > 
@@ -38,17 +37,13 @@ let renderMainCategory = () =>{
                                 <p>${ele.discretion}</p>
                             </div>
                         </div>`);
-        card.appendTo(categories); 
-        // console.log("titel   el",ele.title);   
+        card.appendTo(categories);  
     });
-    
 }
 renderMainCategory()
 
 // render list of products part2
 let renderItems =(category,index)=>{
-    
-    console.log("eee",mainCategory[index]?.title);
     products.empty()
     if( category )
         {
@@ -75,47 +70,28 @@ let renderItems =(category,index)=>{
 renderItems()
 
 
-// const loginForm = $('#myForm')
-// let loginBut = $("#login")
-
-// // let login = () =>{
-
-// // }
-// // $('#myForm').show();
-
-// let flag = true;
+// let cart = {}
+// const addToCart = ()=>{
+// }
 
 
+const loginForm = $('#myForm')
+let loginBut = $("#login")
 
-// $("#login").on("click", function () {
-//     console.log("login");
-//   if (flag) {
-//     loginForm.fadeIn("slow");
-//     flag = false;
-//   } else {
-//     loginForm.fadeOut("slow");
-//     flag = true;
-//   }
-// });
+// let login = () =>{
 
-// hide and show
+// }
+// $('#myForm').show();
 
-// const nuts = $("#category-1-")
+let flag = true;
 
-// $(document).ready(function(){
-//     $("#category-1-1").click(function(){
-//         $(this).hide();
-//     });
-// });
-
-// let flag = true;
-
-// $("#category-1").on("click", function () {
-//   if (flag) {
-//     nuts.fadeIn("slow");
-//     flag = false;
-//   } else {
-//     nuts.fadeOut("slow");
-//     flag = true;
-//   }
-// });
+loginBut.on("click", function () {
+    console.log("login");
+  if (flag) {
+    loginForm.fadeIn("slow");
+    flag = false;
+  } else {
+    loginForm.fadeOut("slow");
+    flag = true;
+  }
+});

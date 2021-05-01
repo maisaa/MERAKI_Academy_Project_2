@@ -86,7 +86,7 @@ section {
 #sub-category {
     
     text-align: center;
-    padding-top: 10px;
+    padding-top: 32px;
 }
 
 .midLine {
@@ -111,16 +111,22 @@ section {
     margin: 2%;
 }
 
+
 .title:hover{
     font-size: larger;
     transition: .5s;
     cursor: pointer;
-  }
+}
 
 .image img{
     width: 100%;
     border-radius: 15px; 
 }
+img:hover{
+    transition: .5s;
+    cursor: pointer;
+}
+
 
 .title{
     
@@ -134,6 +140,7 @@ section {
     padding: 15%;
     grid-gap: 2em;
     padding-bottom: 20px;
+    padding-top: 32px;
 }
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
@@ -169,19 +176,19 @@ section {
     
 }
 button{
-    margin-top: 40px;
+    margin-top: 2px;
     margin-bottom: 10px;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
     padding:10px;
-  }
-  button:hover{
+}
+button:hover{
     background-color: black;
     color: white;
     transition: .5s;
     cursor: pointer;
-  }
+}
 
 
 
@@ -195,3 +202,5 @@ button{
 
 /* 
 /* // just to try   */
+
+
