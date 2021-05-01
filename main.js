@@ -2,9 +2,9 @@ const body = $('body')
 let products = $('#products')
 let categories = $('#main-category')
 
-let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " delicious roasted and ground coffee, specially designed for our dear customers " },
-{ src: "./images/n2.jpg", title: "Nuts", description: "high quality nuts, tasty every time from Aladdin Roastery to all parts of Germany" },
-{ src: "./images/cc.jpg", title: "Chocolate", description: " made from the finest cocoa beans and the highest European health and quality standards" }]
+let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " delicious roasted and ground coffee specially designed for our dear customers " },
+{ src: "./images/n2.jpg", title: "Nuts", description: "high quality nuts, tasty every time from Aladdin roastery to all parts of Germany" },
+{ src: "./images/cc.jpg", title: "Chocolate", description: "made from the best and finest raw chocolate to draw a smile on your face" }]
 
 // let items = ["./images/13.jpeg","./images/14.jpeg","./images/15.jpeg"]
 let Chocolate = [{ type: "Chocolate", src: "./images/13.jpeg", title: "Pistachio", description: "discretion" },

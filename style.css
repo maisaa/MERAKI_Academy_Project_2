@@ -73,7 +73,6 @@ li a{
 }
 
 
-
 section {
     background: rgba(31, 25, 25,0.0);
     box-sizing: border-box;
@@ -103,14 +102,12 @@ section {
     
 }
 
-
 .card {
     width: 20%;
     display: inline-block;
     border-radius: 15px; 
     margin: 2%;
 }
-
 
 .title:hover{
     font-size: larger;
@@ -127,11 +124,10 @@ img:hover{
     cursor: pointer;
 }
 
-
 .title{
     
     text-align: center;
-    padding: 10px;
+    padding: 1px;
 }
 
 .grid-container {
@@ -166,13 +162,11 @@ img:hover{
     margin: 2%;
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0);
 }
-#part2 {
-    /* box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38); */
-}
 
 .description {
     
     text-align: center;
+    padding: 1px;
     
 }
 button{
