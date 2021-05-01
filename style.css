@@ -1,5 +1,9 @@
-.body{
-    background-color: rgb(27, 27, 26);
+body{
+    display: grid;
+    grid-template-columns: 1fr 20fr 1fr;  
+}
+.main-page{
+    position: relative;
 }
 
 ul{
@@ -17,10 +21,10 @@ li a{
 }
 
 .container {
-    position: fixed;
+    position: relative;
     z-index: 10;
     top: 0;
-    width: 97%;
+    width: 100%;
     max-height: 90px;
     margin: 10px;
     align-items: center;
@@ -49,15 +53,16 @@ li a{
 	background-color: rgb(15, 6, 6);
 	cursor: pointer;
 }
-#contant {
+#content {
     position: absolute;
     top: 110px;
 
 }
 
 .footer {
+    width: 100%;
     height: 50px;
-    padding: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -69,6 +74,13 @@ section {
     justify-content: space-between;
     
     
+}
+
+#midLine {
+    width: 100%;
+    height: 2px;
+    background-color: #C2953E;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38);
 }
 .div {
     box-sizing: border-box;
@@ -102,6 +114,7 @@ section {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 15%;
     grid-gap: 2em;
+    padding-bottom: 20px;
 }
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
@@ -128,9 +141,11 @@ section {
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0);
 }
 #part2 {
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38);
+    /* box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38); */
 }
 
 .deception {
     text-align: center;
 }
+
+

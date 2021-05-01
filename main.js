@@ -43,6 +43,10 @@ renderMainCategory()
 let renderItems =(category)=>{
     products.empty()
     category.forEach( (ele,i) => {
+        // if( category === undefined)
+        // {
+        //     console.log("first time");
+        // }
         console.log("render list of items");
         const card =$( `<div id=${i} class="item-card">
                             <div class="image">
