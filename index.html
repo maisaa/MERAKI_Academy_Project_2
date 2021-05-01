@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chocolate Store</title>
     <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div></div>
@@ -25,10 +30,10 @@
           <li class="nav"><a href="#products">Products</a></li>
           <li class="nav"><a href="#contact">Contact</a></li>
           <li class="nav"><a href="#about">About</a></li>
-          <li class="nav"><a href="#login" class="btn">Login</a></li>
+          <li class="nav"><a href="#login" id="login" class="active btn">Login</a></li>
         </ul>
       </div>
-      <a href="" ></a>
+
       <div id="content">
         <div id="part1">
           <section id="main-category" class="nav">
@@ -39,7 +44,7 @@
         <div class="midLine"></div>
 
         <div id="part2">
-            <h2 id="sub-title"></h2>
+            <h2 id="sub-category"></h2>
           <section id="products" class="grid-container">
             <!-- products -->
           </section>
@@ -55,18 +60,27 @@
 
       </div>
 
+      <!-- <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Login</h1>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div> -->
       
 
     </div>
    
     <div></div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    
     <script src="./main.js"></script>
   </body>
 </html>
