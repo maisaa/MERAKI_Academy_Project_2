@@ -62,7 +62,7 @@ let renderItems = (category, index) => {
                                 <h3>${ele.title}</h3>
                             </div>
                             <div class="description">
-                                <button>Add to cart</button>
+                                <button onclick="addToCart()">Add to cart</button>
                             <div>
                         </div>`)
             console.log("card ", card);
@@ -88,6 +88,10 @@ let login = () => {
     form.appendTo(loginForm)
 }
 
+// let logout = () => {
+
+// }
+
 loginBut.on("click", function () {
     console.log("login");
     if (flag) {
@@ -111,7 +115,13 @@ $("#userEmail").text(localStorage.getItem('userEmail'));
 
 
 
-// let cart = {}
+// let cart = []
+
 // const addToCart = ()=>{
+//     console.log("Add")
+//     if(Chocolate){
+//         cart.push(Chocolate[i].title)
+//         console.log("......>",cart)
+//     }
 // }
 // let users = {}

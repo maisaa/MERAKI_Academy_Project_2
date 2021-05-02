@@ -61,7 +61,7 @@ li a{
 }
 
 .btn {
-	
+    width: 100%;
 	padding: 0.5rem 1rem;
 	font-size: 1.1rem;
     color: rgb(236, 233, 233);
@@ -200,24 +200,27 @@ button:hover{
 /* 
 /* // just to try   */
 .form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  width: 310;
+  top: 50%;
+  left: 38%;
   right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+  z-index: 12;
 }
 
 /* Add styles to the form container */
 .form-container {
+ position: fixed;   
   max-width: 300px;
   padding: 10px;
   background-color: white;
+  border: solid;
+  border-radius: 10px;
 }
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
+  width: 85%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -230,7 +233,7 @@ button:hover{
   outline: none;
 }
 
-/* Set a style for the submit/login button */
+/* Set a style for the submit/login button
 .form-container .btn {
   background-color: #04AA6D;
   color: white;
@@ -240,15 +243,5 @@ button:hover{
   width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
+} */
 
