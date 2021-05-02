@@ -1,6 +1,11 @@
 const body = $('body')
 let products = $('#products')
 let categories = $('#main-category')
+const loginForm = $('#myForm')
+let loginBut = $("#login")
+let flag = true;
+
+
 
 let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " delicious roasted and ground coffee specially designed for our dear customers " },
 { src: "./images/n2.jpg", title: "Nuts", description: "high quality nuts, tasty every time from Aladdin roastery to all parts of Germany" },
@@ -48,7 +53,6 @@ let renderItems = (category, index) => {
     if (category) {
         $('#sub-category').text(mainCategory[index]?.title)
         category.forEach((ele, i) => {
-
             console.log("render list of items");
             const card = $(`<div id=${i} class="item-card">
                             <div class="image">
@@ -68,31 +72,21 @@ let renderItems = (category, index) => {
 }
 renderItems()
 
-
-// let cart = {}
-// const addToCart = ()=>{
-// }
-
-
-const loginForm = $('#myForm')
-let loginBut = $("#login")
-
 let login = () => {
+    loginForm.empty();
     const form = $(` <form action="#products" class="form-container">
                             <h1>Login</h1>
                         
                             <label for="email"><b>Email</b></label>
-                            <input type="text" placeholder="Enter Email" name="email" required>
+                            <input id="email" type="text" placeholder="Enter Email" name="email" required>
                         
                             <label for="psw"><b>Password</b></label>
                             <input type="password" placeholder="Enter Password" name="psw" required>
                         
-                            <button type="submit" class="btn">Login</button>
+                            <button type="submit" class="btn" onclick="setUser()">Login</button>
                     </form>`)
     form.appendTo(loginForm)
 }
-
-let flag = true;
 
 loginBut.on("click", function () {
     console.log("login");
@@ -106,8 +100,18 @@ loginBut.on("click", function () {
     }
 });
 
+let setUser = () =>{
 
-let openForm = () => {
-    loginForm.style.display = "block";
+    console.log("setUser")
+    localStorage.setItem('userEmail', $("#email").val());
 }
 
+$("#userEmail").text(localStorage.getItem('userEmail'));
+
+
+
+
+// let cart = {}
+// const addToCart = ()=>{
+// }
+// let users = {}

@@ -39,6 +39,9 @@ li a{
     align-items: center;
     padding: 2rem;
 }
+#userEmail {
+    color: rgb(230, 227, 227); ;
+}
 .footer {
     width: 100%;
     height: 50px;
@@ -112,7 +115,7 @@ section {
 .title:hover{
     font-size: larger;
     transition: .5s;
-    cursor: pointer;
+    
 }
 
 .image img{
