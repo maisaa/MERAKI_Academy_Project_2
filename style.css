@@ -254,3 +254,10 @@ button:hover{
     background: rgba(255, 255, 255, 0.2);
     filter: blur(20px) grayscale(20%);
 }
+
+
+li-shopping-orders  {
+    display: inline-block;
+    width: 70px;
+    height: 10px;
+}

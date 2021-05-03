@@ -1,22 +1,24 @@
-const body = $('body')
-let products = $('#products')
-let categories = $('#main-category')
-const loginForm = $('#myForm')
-let loginBut = $('#login')
-let logoutBut = $('#logout')
+const body = $('body');
+let products = $('#products');
+let categories = $('#main-category');
+const loginForm = $('#myForm');
+let loginBut = $('#login');
+let logoutBut = $('#logout');
+let content = $('#content');
+let navbar = $('#navbar');
+let userEmail = $('#userEmail');
+let cartIcon = $('#icon');
+let userCart = $('#userCart');
+const orders = $('#orders');
 let flag = true;
-let content = $('#content')
-let navbar = $('#navbar')
-let userEmail = $('#userEmail')
-let cartIcon = $('#icon')
-let userCart = $('#userCart')
-let cart = []
+let total = 0;
+let cart = [];
 userCart.hide();
 
 
 let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " delicious roasted and ground coffee specially designed for our dear customers " },
 { src: "./images/n2.jpg", title: "Nuts", description: "high quality nuts, tasty every time from Aladdin roastery to all parts of Germany" },
-{ src: "./images/pro.jpg", title: "Chocolate", description: "made from the best and finest raw chocolate to draw a smile on your face" }]
+{ src: "./images/home.jpg", title: "Chocolate", description: "made from the best and finest raw chocolate to draw a smile on your face" }]
 
 // let allItems = []
 let Chocolate = [{ type: "Chocolate", price: "19", src: "./images/13.jpeg", title: "Pistachio", description: "discretion" },
@@ -70,7 +72,7 @@ let renderItems = (category, index) => {
                                 <h3>${ele.title}</h3>
                             </div>
                             <div class="description">
-                                <button onclick="addToCart('${ele.type}',${i})">Add to cart</button>
+                                <button onclick="addToCart('${ele.type}','${ele.title}','${ele.price}',${i})">Add to cart</button>
                             <div>
                         </div>`)
             console.log("card ", card);
@@ -124,9 +126,9 @@ let setUser = () => {
 }
 // $("#userEmail").text(localStorage.getItem('userEmail'));
 
-let addToCart = (type, i) => {
+let addToCart = (type,title,price, i) => {
     console.log("Add", i)
-    cart.push({ type, i })
+    cart.push({ type, title, price, i})
     // cart.push(i)
     console.log("......>", cart)
 }
@@ -135,10 +137,26 @@ let openCart = () => {
     if (flag) {
         console.log("open cart")
         userCart.show();
+        shoppingList();
         flag = false;
     } else {
         userCart.hide();
         flag = true;
+    }
+}
+
+let shoppingList = ()=>{
+    
+    if(cart.length > 0){
+        cart.forEach((ele,i) => {
+            let li = $(`<li>
+                            <div class="li-shopping-orders">${cart[i].title} </div>
+                            <div class="li-shopping-orders">${cart[i].price} </div>
+                        </li>`)
+            li.appendTo(orders);
+            total = total + cart[i].price
+        });
+        $('total').text(total)
     }
 }
 
