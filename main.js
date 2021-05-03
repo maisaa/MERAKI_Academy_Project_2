@@ -99,8 +99,8 @@ loginBut.on("click", function () {
         // loginForm.fadeIn("slow");
         loginBut.text("Logout")
         $('#userEmail').text(localStorage.getItem('userEmail'));
-        navbar.hide()
-        content.hide()
+        navbar.addClass('blur')
+        content.addClass('blur')
         flag = false;
     } else {
         // loginForm.fadeOut("slow");
@@ -118,8 +118,8 @@ let setUser = () => {
     localStorage.setItem('userEmail', $("#email").val());
     userEmail.text($("#email").val())
     loginForm.hide()
-    navbar.show();
-    content.show();
+    navbar.removeClass('blur');
+    content.removeClass('blur');
     
 }
 // $("#userEmail").text(localStorage.getItem('userEmail'));
