@@ -14,10 +14,13 @@ a {
 }
 
 li a{
-    color: rgb(128, 128, 128);
+    color: rgb(230, 227, 227);
 }
 .active {
     color: rgb(230, 227, 227);
+}
+.active:hover {
+    cursor: pointer;
 }
 
 .container {
@@ -28,10 +31,11 @@ li a{
     max-height: 90px;
     margin: 10px;
     align-items: center;
-    background-color:   rgba(13, 17, 23,0.85);
+    background-color:   rgb(52, 52, 52);  
     display: flex;
     justify-content: space-between;  
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38);
+    box-shadow: 0px 6px 24px -4px rgba(0,0,0,0.78);
+   
 }
 .nav {
     display: flex;
@@ -51,7 +55,7 @@ li a{
     margin-top: 10px;
     text-align: center;
     color: rgb(230, 227, 227);
-    background-color:   rgba(13, 17, 23,0.85);
+    background-color:    rgb(52, 52, 52);  
 }
 
 #logo {
@@ -59,9 +63,9 @@ li a{
     height: 80px;
 }
 #icon {
-    width: 30px;
-    height: 30px;
-    background-color: #f1f1f1;
+    width: 40px;
+    height: 40px;
+    background-color: #C2953E;
     border-radius: 50%;
 }
 
@@ -77,10 +81,12 @@ li a{
 #content {
     position: absolute;
     top: 110px;
-
 }
 
-
+#part2 {
+    display: grid;
+    grid-template-columns: 1fr 20fr 1fr;  
+}
 section {
     background: rgba(31, 25, 25,0.0);
     box-sizing: border-box;
@@ -125,6 +131,7 @@ section {
 
 .image img{
     width: 100%;
+    height: 185px;
     border-radius: 15px; 
 }
 img:hover{
