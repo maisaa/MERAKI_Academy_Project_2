@@ -6,6 +6,7 @@ let loginBut = $("#login")
 let flag = true;
 let content = $('#content')
 let navbar = $('#navbar')
+let cart = []
 
 
 
@@ -13,14 +14,14 @@ let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " de
 { src: "./images/n2.jpg", title: "Nuts", description: "high quality nuts, tasty every time from Aladdin roastery to all parts of Germany" },
 { src: "./images/cc.jpg", title: "Chocolate", description: "made from the best and finest raw chocolate to draw a smile on your face" }]
 
-// let items = ["./images/13.jpeg","./images/14.jpeg","./images/15.jpeg"]
+// let allItems = []
 let Chocolate = [{ type: "Chocolate", src: "./images/13.jpeg", title: "Pistachio", description: "discretion" },
 { type: "Chocolate", src: "./images/t1.jpeg", title: "Rocher", description: "Rocher & pistachio" },
 { type: "Chocolate", src: "./images/15.jpeg", title: "Man & Salwa", description: "Man & Salwa" },
 { type: "Chocolate", src: "./images/14.jpeg", title: "Rose", description: "discretion" },
 { type: "Chocolate", src: "./images/t2.jpeg", title: "Wafer", description: "Wafer & pistachio" },
 { type: "Chocolate", src: "./images/5.jpeg", title: "Baby set", description: "Baby set" },
-{ type: "Chocolate", src: "./images/ms.jpg", title: "Gift", description: "Gift" }]
+{ type: "Chocolate", src: "./images/ms.jpg", title: "Gifts", description: "Gifts" }]
 
 let Nuts = [{ type: "Nuts", src: "./images/p.jpg", title: "Pistachio", description: "Ppistachio" },
 { type: "Nuts", src: "./images/k.jpg", title: "Cashew", description: "Cashew" },
@@ -64,7 +65,7 @@ let renderItems = (category, index) => {
                                 <h3>${ele.title}</h3>
                             </div>
                             <div class="description">
-                                <button onclick="addToCart()">Add to cart</button>
+                                <button onclick="addToCart(${ele},${i})">Add to cart</button>
                             <div>
                         </div>`)
             console.log("card ", card);
@@ -72,7 +73,6 @@ let renderItems = (category, index) => {
         });
     }
 }
-renderItems()
 
 let login = () => {
     loginForm.empty();
@@ -90,10 +90,6 @@ let login = () => {
     form.appendTo(loginForm)
 }
 
-// let logout = () => {
-
-// }
-
 loginBut.on("click", function () {
     console.log("login");
     if (flag) {
@@ -109,25 +105,19 @@ loginBut.on("click", function () {
 });
 
 let setUser = () =>{
-
     console.log("setUser")
     content.fadeIn("slow");
     localStorage.setItem('userEmail', $("#email").val());
-
 }
 $("#userEmail").text(localStorage.getItem('userEmail'));
 
 
 
-
-
-// let cart = []
-
-// const addToCart = ()=>{
-//     console.log("Add")
-//     if(Chocolate){
-//         cart.push(Chocolate[i].title)
-//         console.log("......>",cart)
-//     }
-// }
-// let users = {}
+const addToCart = (item,i)=>{
+    console.log("Add", item)
+    if(item){
+        cart.push(item[i].title)
+        console.log("......>",cart)
+    }
+}
+let users = {}
