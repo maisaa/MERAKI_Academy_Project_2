@@ -4,6 +4,8 @@ let categories = $('#main-category')
 const loginForm = $('#myForm')
 let loginBut = $("#login")
 let flag = true;
+let content = $('#content')
+let navbar = $('#navbar')
 
 
 
@@ -97,6 +99,8 @@ loginBut.on("click", function () {
     if (flag) {
         login()
         loginForm.fadeIn("slow");
+        content.hide()
+        navbar.hide()
         flag = false;
     } else {
         loginForm.fadeOut("slow");
@@ -107,10 +111,12 @@ loginBut.on("click", function () {
 let setUser = () =>{
 
     console.log("setUser")
+    content.fadeIn("slow");
     localStorage.setItem('userEmail', $("#email").val());
-}
 
+}
 $("#userEmail").text(localStorage.getItem('userEmail'));
+
 
 
 
