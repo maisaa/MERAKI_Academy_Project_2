@@ -58,6 +58,12 @@ li a{
     width: 150px;
     height: 80px;
 }
+#icon {
+    width: 30px;
+    height: 30px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+}
 
 .btn {
     width: 100%;
@@ -132,6 +138,7 @@ img:hover{
     padding: 1px;
 }
 
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -202,6 +209,27 @@ button:hover{
     background-color: white;
     border: solid;
     border-radius: 10px;
+}
+
+.cart-popup {
+    position: fixed;
+    width: 900px;
+    top: 25%;
+    left: 39%;
+    z-index: 12;
+}
+.cart-container {
+    top: 120px;
+    left: 69%;
+    position: fixed;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border: solid;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+
 }
 
 

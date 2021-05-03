@@ -2,12 +2,14 @@ const body = $('body')
 let products = $('#products')
 let categories = $('#main-category')
 const loginForm = $('#myForm')
-let loginBut = $("#login")
+let loginBut = $('#login')
 let flag = true;
 let content = $('#content')
 let navbar = $('#navbar')
+let cartIcon = $('#icon')
+let userCart = $('#userCart')
 let cart = []
-
+userCart.hide();
 
 
 let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " delicious roasted and ground coffee specially designed for our dear customers " },
@@ -15,20 +17,20 @@ let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " de
 { src: "./images/cc.jpg", title: "Chocolate", description: "made from the best and finest raw chocolate to draw a smile on your face" }]
 
 // let allItems = []
-let Chocolate = [{ type: "Chocolate", src: "./images/13.jpeg", title: "Pistachio", description: "discretion" },
-{ type: "Chocolate", src: "./images/t1.jpeg", title: "Rocher", description: "Rocher & pistachio" },
-{ type: "Chocolate", src: "./images/15.jpeg", title: "Man & Salwa", description: "Man & Salwa" },
-{ type: "Chocolate", src: "./images/14.jpeg", title: "Rose", description: "discretion" },
-{ type: "Chocolate", src: "./images/t2.jpeg", title: "Wafer", description: "Wafer & pistachio" },
-{ type: "Chocolate", src: "./images/5.jpeg", title: "Baby set", description: "Baby set" },
-{ type: "Chocolate", src: "./images/ms.jpg", title: "Gifts", description: "Gifts" }]
+let Chocolate = [{ type: "Chocolate", price:"19", src: "./images/13.jpeg", title: "Pistachio", description: "discretion" },
+{ type: "Chocolate", price:"19", src: "./images/t1.jpeg", title: "Rocher", description: "Rocher & pistachio" },
+{ type: "Chocolate", price:"17", src: "./images/15.jpeg", title: "Man & Salwa", description: "Man & Salwa" },
+{ type: "Chocolate", price:"20", src: "./images/14.jpeg", title: "Rose", description: "discretion" },
+{ type: "Chocolate", price:"15", src: "./images/t2.jpeg", title: "Wafer", description: "Wafer & pistachio" },
+{ type: "Chocolate", price:"25", src: "./images/5.jpeg", title: "Baby set", description: "Baby set" },
+{ type: "Chocolate", price:"25", src: "./images/ms.jpg", title: "Gifts", description: "Gifts" }]
 
-let Nuts = [{ type: "Nuts", src: "./images/p.jpg", title: "Pistachio", description: "Ppistachio" },
-{ type: "Nuts", src: "./images/k.jpg", title: "Cashew", description: "Cashew" },
-{ type: "Nuts", src: "./images/mix.jpg", title: "Mix nuts", description: "Mix nuts" },
-{ type: "Nuts", src: "./images/l.jpg", title: "Almonds", description: "Almonds" },]
+let Nuts = [{ type: "Nuts",price:"17", src: "./images/p.jpg", title: "Pistachio", description: "Ppistachio" },
+{ type: "Nuts",price:"18", src: "./images/k.jpg", title: "Cashew", description: "Cashew" },
+{ type: "Nuts",price:"15", src: "./images/mix.jpg", title: "Mix nuts", description: "Mix nuts" },
+{ type: "Nuts",price:"14", src: "./images/l.jpg", title: "Almonds", description: "Almonds" },]
 
-let Coffee = [{ type: "Coffee", src: "./images/c1.jpg", title: "Arabic coffee", description: "discretion" }]
+let Coffee = [{ type: "Coffee",price:"12", src: "./images/c1.jpg", title: "Arabic coffee", description: "discretion" }]
 
 // render main Category part1
 let renderMainCategory = () => {
@@ -65,7 +67,7 @@ let renderItems = (category, index) => {
                                 <h3>${ele.title}</h3>
                             </div>
                             <div class="description">
-                                <button onclick="addToCart(${ele},${i})">Add to cart</button>
+                                <button onclick="addToCart('${ele.type}',${i})">Add to cart</button>
                             <div>
                         </div>`)
             console.log("card ", card);
@@ -76,7 +78,7 @@ let renderItems = (category, index) => {
 
 let login = () => {
     loginForm.empty();
-    const form = $(` <form action="#products" class="form-container">
+    const form = $(` <form class="form-container">
                             <h1>Login</h1>
                         
                             <label for="email"><b>Email</b></label>
@@ -111,13 +113,35 @@ let setUser = () =>{
 }
 $("#userEmail").text(localStorage.getItem('userEmail'));
 
+let addToCart = (type,i)=>{
+    console.log("Add", i)
+    cart.push({type,i})
+    // cart.push(i)
+    console.log("......>",cart)
+}
 
+let openCart = () =>{
+    if(flag){
+        console.log("open cart")
+        userCart.show();
+        flag =false;
+    }else{
+        userCart.hide();
+        flag = true;
 
-const addToCart = (item,i)=>{
-    console.log("Add", item)
-    if(item){
-        cart.push(item[i].title)
-        console.log("......>",cart)
     }
 }
-let users = {}
+
+let closeCart =() =>{
+    userCart.hide();
+}
+
+let buy = () => {
+    console.log("")
+}
+
+
+
+
+
+// let users = {}

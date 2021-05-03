@@ -24,7 +24,12 @@
         />
         <ul class="nav">
           <li id="userEmail" class="nav"><a href=""></a></li>
-          <li class="nav"><a href="" class="active"></a></li>
+          <li class="nav"><img
+            id="icon"
+            src="./images/shopping-cart (1).png"
+            alt="logo"
+            onclick="openCart()"
+          /> </a></li>
           <li class="nav"><a href="" class="active">Home</a></li>
           <li class="nav"><a href="#products">Products</a></li>
           <li class="nav"><a href="#contact">Contact</a></li>
@@ -36,6 +41,7 @@
       </div>
 
       <div id="content">
+
         <div id="part1">
           <section id="main-category" class="nav">
             <!-- categories -->
@@ -51,8 +57,6 @@
           </section>
         </div>
 
-        <!-- <div class="midLine"></div> -->
-
         <div>
           <footer id="about" class="container footer">
             <p>Aladdin Coffee . Nuts . Chocolate 2021</p>
@@ -62,9 +66,25 @@
 
       <div class="form-popup" id="myForm">
         <!-- login  -->
-        
+      </div>
+
+      <div id="userCart" class="cart-popup" id="userCart">
+        <div class="cart-container">
+          <div>
+            <h1 class="title">shopping-cart</h1>
+          </div>
+          <div>
+            <label>Total</label>
+            <p id="">total</p>
+          </div>
+          <div>
+            <button type="submit" class="btn" onclick="closeCart()" >Close</button>
+            <button type="submit" class="btn" onclick="buy()" >Buy</button>
+          </div>
+        </div>
       </div>
     </div>
+    
     <div></div>
 
     <script src="./main.js"></script>
