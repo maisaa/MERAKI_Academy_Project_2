@@ -17,7 +17,7 @@ let cart = [];
 userCart.hide();
 
 
-let mainCategory = [{ src: "./images/c0.jpg", title: "Coffee", description: " delicious roasted and ground coffee specially designed for our dear customers " },
+let mainCategory = [{ src: "./images/cofe.jpg", title: "Coffee", description: " delicious roasted and ground coffee specially designed for our dear customers " },
 { src: "./images/n2.jpg", title: "Nuts", description: "high quality nuts, tasty every time from Aladdin roastery to all parts of Germany" },
 { src: "./images/home.jpg", title: "Chocolate", description: "made from the best and finest raw chocolate to draw a smile on your face" }]
 
@@ -35,7 +35,7 @@ let Nuts = [{ type: "Nuts", price: "17", src: "./images/p.jpg", title: "Pistachi
 { type: "Nuts", price: "15", src: "./images/mix.jpg", title: "Mix nuts", description: "Mix nuts" },
 { type: "Nuts", price: "14", src: "./images/l.jpg", title: "Almonds", description: "Almonds" },]
 
-let Coffee = [{ type: "Coffee", price: "12", src: "./images/c1.jpg", title: "Coffee with cardamom", description: "Coffee beans with cardamom" },
+let Coffee = [{ type: "Coffee", price: "12", src: "./images/dc.jpg", title: "Coffee with cardamom", description: "Coffee beans with cardamom" },
             { type: "Coffee", price: "12", src: "./images/a.jpg", title: "Arabic coffee", description: "discretion" }]
 
 // render main Category part1
@@ -117,8 +117,6 @@ loginBut.on("click", ()=> {
         location.reload();
     }
 });
-
-
 
 let setUser = () => {
     // e.preventDefault()
@@ -202,6 +200,3 @@ $('#buyBut').on("click", ()=> {
 let closeNote = ()=>{
     $('.toast').hide()
 }
-
-
-
