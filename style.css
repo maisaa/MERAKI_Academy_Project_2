@@ -145,6 +145,11 @@ img:hover{
     text-align: center;
     padding: 1px;
 }
+.shopping-title{
+    font-size: larger;
+    text-align: center;
+    padding: 1px;
+}
 
 .li-content {
     display: flex;
@@ -235,6 +240,7 @@ button:hover{
     z-index: 12;
 }
 .cart-container {
+    position: fixed;
     top: 120px;
     left: 69%;
     position: fixed;

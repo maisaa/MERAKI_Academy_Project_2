@@ -7,6 +7,7 @@ let logoutBut = $('#logout');
 let content = $('#content');
 let navbar = $('#navbar');
 let userEmail = $('#userEmail');
+let userInfo = '';
 let cartIcon = $('#icon');
 let userCart = $('#userCart');
 const orders = $('#orders');
@@ -59,7 +60,10 @@ renderMainCategory()
 
 // render list of products part2
 let renderItems = (category, index) => {
-    // if( !usr)
+    // if( localStorage.getItem('userEmail')){    // it should chick if there is user or not 
+    //     console.log('user not found')
+    // }
+    // console.log(localStorage.getItem('userEmail'));
     products.empty()
     if (category) {
         $('#sub-category').text(mainCategory[index]?.title)
@@ -101,7 +105,7 @@ loginBut.on("click", function () {
         callLogin()
         // loginForm.fadeIn("slow");
         loginBut.text("Logout")
-        $('#userEmail').text(localStorage.getItem('userEmail'));
+        userEmail.text(localStorage.getItem('userEmail'));
         navbar.addClass('blur')
         content.addClass('blur')
         flag = false;
