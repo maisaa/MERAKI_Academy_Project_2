@@ -59,6 +59,7 @@ renderMainCategory()
 
 // render list of products part2
 let renderItems = (category, index) => {
+    // if( !usr)
     products.empty()
     if (category) {
         $('#sub-category').text(mainCategory[index]?.title)
@@ -113,6 +114,8 @@ loginBut.on("click", function () {
     }
 });
 
+
+
 let setUser = () => {
     // e.preventDefault()
     console.log("setUser")
@@ -124,12 +127,13 @@ let setUser = () => {
     content.removeClass('blur');
     
 }
-// $("#userEmail").text(localStorage.getItem('userEmail'));
 
+// $("#userEmail").text(localStorage.getItem('userEmail'));
 let addToCart = (type,title,price, i) => {
+    
     console.log("Add", i)
     cart.push({ type, title, price, i})
-    // cart.push(i)
+    // $('#buyBut').show();
     console.log("......>", cart)
 }
 
@@ -138,6 +142,7 @@ let openCart = () => {
         console.log("open cart")
         userCart.show();
         shoppingList();
+        
         flag = false;
     } else {
         userCart.hide();
@@ -146,18 +151,28 @@ let openCart = () => {
 }
 
 let shoppingList = ()=>{
-    
+
+    $('#buyBut').hide();
     if(cart.length > 0){
+        $('#buyBut').show();
         cart.forEach((ele,i) => {
             let li = $(`<li>
-                            <div class="li-shopping-orders">${cart[i].title} </div>
-                            <div class="li-shopping-orders">${cart[i].price} </div>
+                            <div class="li-content">
+                                <div class="li-shopping-orders">${cart[i].title} </div>
+                                <div class="li-shopping-orders">${cart[i].price} </div>
+                                
+                            </div>
                         </li>`)
             li.appendTo(orders);
-            total = total + cart[i].price
+            total = total + parseInt(cart[i].price) 
+            console.log('total',total)
         });
-        $('total').text(total)
+        // $('#buyBut').show();
+        $('#total').text(total);
+    }else{
+        $('#buyBut').hide();
     }
+    
 }
 
 let closeCart = () => {
@@ -165,7 +180,7 @@ let closeCart = () => {
 }
 
 let buy = () => {
-    console.log("")
+    console.log("Purchase completed")
 }
 
 
