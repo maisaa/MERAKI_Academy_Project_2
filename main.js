@@ -99,7 +99,7 @@ let callLogin = () => {
     form.appendTo(loginForm)
 }
 
-loginBut.on("click", function () {
+loginBut.on("click", ()=> {
     console.log("login");
     if (flag) {
         callLogin()
@@ -183,12 +183,25 @@ let closeCart = () => {
     userCart.hide();
 }
 
-let buy = () => {
-    console.log("Purchase completed")
+let toast = ()=>{
+    let message = $(`<div class='toast'>
+                        <h1 onclick="closeNote()">Purchase completed</h1>
+                    </div>`);
+    message.appendTo($('.main-page'))                
+}
+toast()
+$('.toast').hide()
+
+$('#buyBut').on("click", ()=> {
+    setTimeout(function() {
+        $('.toast').show();
+        $('#userCart').hide();
+        }, 500);
+})
+
+let closeNote = ()=>{
+    $('.toast').hide()
 }
 
 
 
-
-
-// let users = {}
