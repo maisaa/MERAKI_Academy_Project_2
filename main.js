@@ -140,6 +140,7 @@ let addToCart = (type,title,price, i) => {
 }
 
 let openCart = () => {
+
     if (flag) {
         console.log("open cart")
         userCart.show();
@@ -153,7 +154,8 @@ let openCart = () => {
 }
 
 let shoppingList = ()=>{
-
+    orders.empty();
+    total=0;
     $('#buyBut').hide();
     if(cart.length > 0){
         $('#buyBut').show();
